@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Mh1v5A3b8/MCDNQ9Ja/KbJtetwfGF14rzv2DfU3rzptpfA9rXzIuxzVqJLbbFVah/VaIJHpPVdS10qBXf6TM6A==",
+  "success": true,
+  "projectFilePath": "E:\\UNI CODE\\OOP\\Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dean2\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\dean2\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
