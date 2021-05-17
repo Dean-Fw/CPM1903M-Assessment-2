@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 2.csproj": {}
+    "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 3.csproj": {}
   },
   "projects": {
-    "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 2.csproj": {
+    "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 2.csproj",
-        "projectName": "CPM1903M Assessment 2",
-        "projectPath": "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 2.csproj",
+        "projectUniqueName": "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 3.csproj",
+        "projectName": "CPM1903M Assessment 3",
+        "projectPath": "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\CPM1903M Assessment 3.csproj",
         "packagesPath": "C:\\Users\\dean2\\.nuget\\packages\\",
         "outputPath": "E:\\UNI CODE\\OOP\\Asessment-3\\CPM1903M-Assessment-2\\CPM1903M Assessment 2\\CPM1903M Assessment 2\\obj\\",
         "projectStyle": "PackageReference",

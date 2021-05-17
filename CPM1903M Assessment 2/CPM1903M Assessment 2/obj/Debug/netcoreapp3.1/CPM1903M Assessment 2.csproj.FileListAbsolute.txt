@@ -11,3 +11,16 @@ E:\UNI CODE\OOP\Assessment 2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Deb
 E:\UNI CODE\OOP\Assessment 2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.dll
 E:\UNI CODE\OOP\Assessment 2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.pdb
 E:\UNI CODE\OOP\Assessment 2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.genruntimeconfig.cache
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\bin\Debug\netcoreapp3.1\CPM1903M Assessment 2.exe
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\bin\Debug\netcoreapp3.1\CPM1903M Assessment 2.deps.json
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\bin\Debug\netcoreapp3.1\CPM1903M Assessment 2.runtimeconfig.json
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\bin\Debug\netcoreapp3.1\CPM1903M Assessment 2.runtimeconfig.dev.json
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\bin\Debug\netcoreapp3.1\CPM1903M Assessment 2.dll
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\bin\Debug\netcoreapp3.1\CPM1903M Assessment 2.pdb
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.csprojAssemblyReference.cache
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.AssemblyInfoInputs.cache
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.AssemblyInfo.cs
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.csproj.CoreCompileInputs.cache
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.dll
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.pdb
+E:\UNI CODE\OOP\Asessment-3\CPM1903M-Assessment-2\CPM1903M Assessment 2\CPM1903M Assessment 2\obj\Debug\netcoreapp3.1\CPM1903M Assessment 2.genruntimeconfig.cache

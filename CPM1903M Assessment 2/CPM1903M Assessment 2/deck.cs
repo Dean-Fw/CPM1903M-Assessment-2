@@ -2,27 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CPM1903M_Assessment_2
+namespace CPM1903M_Assessment_3
 {
     class deck : card
     {
-        private card[] Deck; //array of all cards
+        private List<card> Deck; //list of all cards
     
         public deck()
         {
-            Deck = new card[52]; //constructs the deck and limits it size
+            Deck = new List<card>(); //constructs the deck
         }
-        public card[] retuurnDeck { get { return Deck; } } //gets the current deck
+        public List<card> retuurnDeck { get { return Deck; } } //gets the current deck
 
         public void fillDeck()
         {
-            int index = 0;
             foreach(suit s in Enum.GetValues(typeof(suit))) //foreach suit value
             {
                 foreach(value v in Enum.GetValues(typeof(value))) //and card value
                 {
-                    Deck[index] = new card { cardSuit = s, cardValue = v }; //add both values to array
-                    index++;//increase the index
+                    Deck.Add(new card { cardSuit = s, cardValue = v }); //add both values to deck
                 }
             }
         }
@@ -45,10 +43,11 @@ namespace CPM1903M_Assessment_2
             }
 
         }
-
         public card deal()
         {
-            return Deck[0];
+            card dealtCard = Deck[0];
+            Deck.RemoveAt(0);
+            return dealtCard;            
         }
     }
 
