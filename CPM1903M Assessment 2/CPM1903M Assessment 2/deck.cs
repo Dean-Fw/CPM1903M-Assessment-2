@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CPM1903M_Assessment_3
 {
-    class deck : card
+    public class deck : card
     {
         private List<card> Deck; //list of all cards
     

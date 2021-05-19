@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CPM1903M_Assessment_3
 {
-    class hand : deck
+    public class hand : deck
     {
         public List<card> Hand { get; set; } //hand created 
 

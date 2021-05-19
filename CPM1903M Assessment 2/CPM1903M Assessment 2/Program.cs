@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CPM1903M_Assessment_2;
+using System;
+using System.Collections.Generic;
 
 namespace CPM1903M_Assessment_3
 {
@@ -13,9 +15,12 @@ namespace CPM1903M_Assessment_3
 
             Console.WriteLine("Shuffling deck ...");
             Deck.shuffle();
-
+            //manager, player and oponent initialised
             manager referee = new manager();
-            
+
+            human player = new human();
+            computer enemy = new computer();
+            //hands created
             hand playerHand = new hand();
             hand computerHand = new hand();
             
@@ -30,17 +35,18 @@ namespace CPM1903M_Assessment_3
                 dealtCard = Deck.deal();
                 computerHand.addToHand(dealtCard);
             }
-            
-            gameLoop(playerHand, computerHand, referee);
-            postGameProcess(Deck, playerHand, computerHand, referee);
+            //game loop begins
+            gameLoop(Deck, playerHand, computerHand, referee, player, enemy);
             
             
         }
+        //function created to recieve a yes or no from user
         static bool userResponse()
         {
             string response = Console.ReadLine().ToUpper();
             if(response != "Y" && response != "N")
             {
+                //if response is not a y or n function will recurse until real response is taken
                 Console.WriteLine("Please only respond with: \"Y\" or \"N\" ");
                 bool consent = userResponse();
                 return consent;
@@ -54,38 +60,83 @@ namespace CPM1903M_Assessment_3
                 return false;
             }
         }
-        static void gameLoop(hand playerHand, hand computerHand, manager referee)
+        static void gameLoop(deck Deck, hand playerHand, hand computerHand, manager referee, human player, computer enemy)
         {
             while (playerHand.Hand.Count > 0)
-            {
-                Console.WriteLine("\nYou play the: ");
-                card humanCard1 = playerHand.playCard();
-                card humanCard2 = playerHand.playCard();
-                Console.WriteLine($"For a toal score of: {Convert.ToInt32(humanCard1.cardValue) + Convert.ToInt32(humanCard2.cardValue)}");
-                Console.WriteLine("\nThe Computer played the: ");
-                card compCard1 = computerHand.playCard();
-                card compCard2 = computerHand.playCard();
-                Console.WriteLine($"For a toal score of: {Convert.ToInt32(compCard1.cardValue) + Convert.ToInt32(compCard2.cardValue)}");
+            {                
+                //while there are cards to play 
+                List<card> humanCards = new List<card>() { player.chooseCard(playerHand), player.chooseCard(playerHand) };
+                List<card> compCards = new List<card>() { enemy.chooseCard(computerHand), enemy.chooseCard(computerHand) };
+                Console.Clear();
 
-                int result = referee.compareCards(humanCard1, humanCard2, compCard1, compCard2);
+                Console.WriteLine("\nYou play the: ");
+                displayPick(humanCards);
+                Console.WriteLine($"For a toal score of: {Convert.ToInt32(humanCards[0].cardValue) + Convert.ToInt32(humanCards[1].cardValue)}");
+                Console.WriteLine("\nThe Computer played the:");               
+                displayPick(compCards);
+                Console.WriteLine($"For a toal score of: {Convert.ToInt32(compCards[0].cardValue) + Convert.ToInt32(compCards[1].cardValue)}");
+
+                int result = referee.compareCards(humanCards[0], humanCards[1], compCards[0], compCards[1]);
                 referee.declareWinner(result);
                 Console.WriteLine($"\nHuman {referee.Pscore} - {referee.Cscore} Computer");
 
-                if (playerHand.Hand.Count > 1)
+                if (playerHand.Hand.Count > 2)
                 {
                     Console.WriteLine("Would you like to continue this match?: (Y/N)");
                     bool toContinue = userResponse();
                     if (!toContinue)
                     {
+                        Console.Clear();
                         Console.WriteLine($"The final scores are: Player {referee.Pscore} - {referee.Cscore} Computer ");
                         Console.WriteLine("\nThank You For Playing !");
                         break;
                     }
+                    Console.Clear();
                 }
+                if (playerHand.Hand.Count == 2)
+                {
+                    Console.WriteLine("\nLast Match! (press enter to continue)");
+                    Console.ReadLine();
+                    Console.Clear();
+                    lastMatch(playerHand, computerHand, referee, Deck, player, enemy);
+                    break;
+                }
+                if (playerHand.Hand.Count < 1)
+                {
+                    postGameProcess(Deck, playerHand, computerHand, referee, player, enemy);
+                }
+            }
+            
+            
+            
 
+            static void displayPick(List<card> Cards)
+            {
+                foreach (card x in Cards)
+                {
+                    Console.WriteLine($"{x.cardValue} of {x.cardSuit}");
+                }
             }
         }
-        static void postGameProcess(deck Deck, hand playerHand, hand computerHand, manager referee)
+
+        private static void lastMatch(hand playerHand, hand computerHand, manager referee, deck Deck, human player, computer enemy)
+        {
+            Console.WriteLine("\nYou finally play the: ");
+            card humanCard1 = playerHand.playCard();
+            card humanCard2 = playerHand.playCard();
+            Console.WriteLine($"For a toal score of: {Convert.ToInt32(humanCard1.cardValue) + Convert.ToInt32(humanCard2.cardValue)}");
+            Console.WriteLine("\nThe Computer played the: ");
+            card compCard1 = computerHand.playCard();
+            card compCard2 = computerHand.playCard();
+            Console.WriteLine($"For a toal score of: {Convert.ToInt32(compCard1.cardValue) + Convert.ToInt32(compCard2.cardValue)}");
+
+            int result = referee.compareCards(humanCard1, humanCard2, compCard1, compCard2);
+            referee.declareWinner(result);
+            Console.WriteLine($"\nHuman {referee.Pscore} - {referee.Cscore} Computer");
+            postGameProcess(Deck, playerHand, computerHand, referee, player, enemy);           
+        }
+
+        static void postGameProcess(deck Deck, hand playerHand, hand computerHand, manager referee, human player, computer enemy)
         {
             if (playerHand.Hand.Count == 0)
             {
@@ -98,11 +149,11 @@ namespace CPM1903M_Assessment_3
                         dealtCard = Deck.deal();
                         computerHand.addToHand(dealtCard);
                     }
-                    gameLoop(playerHand, computerHand, referee);
+                    lastMatch(playerHand, computerHand, referee, Deck,player,enemy);
                     
                     if(referee.Pscore == referee.Cscore)
                     {
-                        postGameProcess(Deck,playerHand,computerHand,referee);
+                        postGameProcess(Deck,playerHand,computerHand,referee, player, enemy);
                     }
                 }                
             }
@@ -132,6 +183,8 @@ namespace CPM1903M_Assessment_3
             Deck.shuffle();
 
             manager referee = new manager();
+            human player = new human();
+            computer enemy = new computer();
 
             hand playerHand = new hand();
             hand computerHand = new hand();
@@ -148,8 +201,7 @@ namespace CPM1903M_Assessment_3
                 computerHand.addToHand(dealtCard);
             }
 
-            gameLoop(playerHand, computerHand, referee);
-            postGameProcess(Deck, playerHand, computerHand, referee);
+            gameLoop(Deck, playerHand, computerHand, referee, player, enemy);
         }
     }
 }
