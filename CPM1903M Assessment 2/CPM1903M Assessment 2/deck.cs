@@ -43,8 +43,10 @@ namespace CPM1903M_Assessment_3
             }
 
         }
+        //deal method 
         public card deal()
         {
+            //cards dealed from the top of the deck then returned
             card dealtCard = Deck[0];
             Deck.RemoveAt(0);
             return dealtCard;            

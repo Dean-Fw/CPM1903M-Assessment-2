@@ -15,7 +15,11 @@ namespace CPM1903M_Assessment_3
         //method to allow cards to be added to hand
         public void addToHand(card dealtCard)
         {
-            Hand.Add(dealtCard); 
+            Hand.Add(dealtCard);
+            if(Hand.Count > 10)
+            {
+                throw new Exception("hand is full, no more cards can be added");
+            }
         }
         //method allowing for the playing of a card
         public card playCard()

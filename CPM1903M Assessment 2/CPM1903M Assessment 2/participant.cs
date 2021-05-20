@@ -4,7 +4,7 @@ namespace CPM1903M_Assessment_2
 {
     public abstract class participant : hand
     {
-        //pick a card
+        //abstract class created around the participants
         public abstract card chooseCard(hand Hand);
 
 
